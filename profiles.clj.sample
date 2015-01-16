@@ -1,0 +1,5 @@
+{:dev {:env {:facebook-access-token "XXX"
+             :facebook-page-id "XXX"
+             :alchemy-api-key "XXX"
+             :slack-webhook-endpoint "XXX"
+             :redis-url "XXX"}}}
