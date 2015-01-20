@@ -28,7 +28,7 @@
 
 (defn post-to-slack [post]
   (client/post slack-webhook-endpoint
-               {:form-params {"text" (str "*" (:name (:from post)) "*: " (:message post) " " (:picture post))} :content-type :json}))
+               {:form-params {"text" (str "*" (:name (:from post)) "*: " (:message post) " " (:picture post) " <http://fb.com/" (:id post) "|(view post)>")} :content-type :json}))
 
 (defn persist [post]
   (wcar* (car/set "latest-facebook-timestamp" (parse-facebook-timestamp (:created_time post)))))
